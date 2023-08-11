@@ -81,6 +81,7 @@
 
         padding: 10px 6px 8px 10px;
         width: 25%;
+        min-width: 7rem;
         text-align: center;
         cursor: pointer;
 
@@ -100,17 +101,54 @@
         left: 50%;
         transform: translate(-50%, -50%);
       }
+      @keyframes slidein {
+        from {
+          opacity: 0;
+          transform: translateY(-4.5rem);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .banner > div {
+        animation: slidein .6s forwards;
+        opacity: 0;
+      }
+
+      .banner > div:nth-child(1) {
+        animation-delay: 0.1s; 
+      }
+
+      .banner > div:nth-child(2) {
+        animation-delay: 0.2s; 
+      }
+      .banner > div:nth-child(3) {
+        animation-delay: 0.3s; 
+      }
+      .banner > div:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .banner > div:nth-child(5) {
+        animation-delay: 0.5s; 
+      }
+      .banner > div:nth-child(6) {
+        animation-delay: 0.6s; 
+      }
+
     </style>
   </head>
   <body>
     <div class="main-container">
       <div class="banner">
-        <div class="banner-question">Какие продукты вы знаете?</div>
-        <div class="banner-answer">Додстер от Додо Пиццы</div>
-        <div class="banner-answer">Тильзитер Ролл от Burger King</div>
-        <div class="banner-answer">Цезарь ролл от Вкусно — и точка</div>
-        <div class="banner-answer">Твистер Де Люкс от KFC</div>
-        <div class="banner-answer">Ни один из вариантов</div>
+        <h2 class="banner-question">Какие продукты вы знаете?</h2>
+        <div class="banner-answer 1">Додстер от Додо Пиццы</div>
+        <div class="banner-answer 2">Тильзитер Ролл от Burger King</div>
+        <div class="banner-answer 3">Цезарь ролл от Вкусно — и точка</div>
+        <div class="banner-answer 4">Твистер Де Люкс от KFC</div>
+        <div class="banner-answer 5">Ни один из вариантов</div>
       </div>
       <button class="skip">Пропустить</button>
       <div class="thanks not-visible">Спасибо за ответ</div>
