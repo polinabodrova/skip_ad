@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dodo</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: transparent;
+      }
+
+      .main-container {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        background-color: #bad3e7;
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 1rem;
+        padding: 2rem;
+      }
+
+      .banner-question {
+        font-family: Montserrat;
+        font-size: 2.8rem;
+        line-height: 3.4rem;
+        font-style: normal;
+        overflow-wrap: break-word;
+        font-weight: 700;
+      }
+
+      .banner-answer {
+        font-family: Montserrat;
+        font-size: 2rem;
+        line-height: 3rem;
+        font-style: normal;
+        overflow-wrap: break-word;
+        padding: 0.8rem;
+        /* max-width: 50%; */
+        width: 27rem;
+        border: 0.1rem solid black;
+        border-radius: 1rem;
+
+        background-color: #fff;
+        font-weight: 300;
+        text-align: center;
+      }
+      .skip {
+        background: rgba(0, 0, 0, 0.7);
+        border: 0.1rem solid rgba(255, 255, 255, 0.5);
+        border-right: 0;
+        box-sizing: content-box;
+        color: #fff;
+        direction: ltr;
+        font-size: 1.3rem;
+        line-height: normal;
+
+        padding: 10px 6px 8px 10px;
+        width: 25%;
+        text-align: center;
+        cursor: pointer;
+
+        position: absolute;
+        right: 2rem;
+        bottom: 2%;
+      }
+
+      .not-visible {
+        display: none;
+      }
+
+      .thanks {
+        position: absolute;
+        width: 70vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="banner">
+        <div class="banner-question">Какие продукты вы знаете?</div>
+        <div class="banner-answer">Додстер от Додо Пиццы</div>
+        <div class="banner-answer">Тильзитер Ролл от Burger King</div>
+        <div class="banner-answer">Цезарь ролл от Вкусно — и точка</div>
+        <div class="banner-answer">Твистер Де Люкс от KFC</div>
+        <div class="banner-answer">Ни один из вариантов</div>
+      </div>
+      <button class="skip">Пропустить</button>
+      <div class="thanks not-visible">Спасибо за ответ</div>
+    </div>
+  </body>
+</html>
